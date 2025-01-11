@@ -1,0 +1,61 @@
+function myFunction(url) {
+    var myWindow = window.open(url, "MsgWindow", "width=1280,height=700");
+}
+
+function curr(n) {
+    var res = parseFloat(n);
+    res = res.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1.");
+    var val = res.slice(0, -3) + '<font color="red">,'+res.slice(-2)+'</font>';
+    return val;
+}
+
+var dataString = {};
+dataString["_token"] = "{{ csrf_token() }}";
+dataString["per"] = "1";
+dataString["sar"] = "2";
+
+var data = $('loadbalance').html();
+var data2 = $('new_memo').html();
+
+function loadbalance() {
+    var route = document.getElementById('request_balance').value;
+    var route2 = document.getElementById('request_memo_count').value;
+    $('#putar2').addClass('fa-spin');
+    $("#putar2").addClass("disabled");
+    $.ajax({
+        url: route,
+        type: 'POST',
+        success: function(data) {
+            $('#refreshbalance').html(curr(data));
+        }
+    })
+
+    $.ajax({
+        url: route2,
+        type: 'POST',
+        success: function(data2) {
+            $('#user-inbox').html(data2);
+            if (data2 == 0) {
+                $('#new_memo').html("Memo");
+                $('#user-inbox').addClass('hidden');
+            } else {
+                $('#new_memo').html("New Memo");
+                $('#user-inbox').removeClass('hidden');
+            }
+        }
+    })
+    setTimeout(function() {
+        $("#putar2").removeClass('disabled');
+    }, 10000);
+    setTimeout(function() {
+        $('#putar2').removeClass('fa-spin');
+    }, 1500);
+}
+
+window.onclick = function(event) {
+    var xxx = document.getElementsByClassName('nw-dropdown-container');
+    if (!event.target.matches('.label')) {
+        $('.nw-dropdown-container').addClass('nw-hide');
+        $('.nw-arrow').addClass('nw-hide');
+    }
+}

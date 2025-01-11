@@ -1,0 +1,1638 @@
+@font-face {
+    font-family: GoboldHigh;
+    src: url("../../assets/fonts/Gobold-High.ttf");
+}
+
+@font-face {
+    font-family: GoboldRegular;
+    src: url("../../assets/fonts/Gobold-Regular.ttf");
+}
+
+.minggir {
+    padding-left: 55px !important;
+}
+
+.tournament {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #4bc74b url("../../assets/img/piala.png?v=1.2") center center
+        no-repeat;
+    background-size: 20px 20px;
+    z-index: 9999;
+    position: absolute;
+    margin-left: 108px;
+}
+
+.spin {
+    position: absolute;
+    top: 13px;
+    right: 44.5%;
+    border-radius: 25px;
+    background: #ff0000;
+    padding: 5px 0px;
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -11px;
+    z-index: 1000;
+}
+
+.card-container .card.card-brown .front {
+    color: white;
+    background-color: #6d4c41;
+}
+
+.card-container .card.card-grey .front {
+    color: white;
+    background-color: #616161;
+}
+
+.card-container .card.card-lightblue .front {
+    color: white;
+    background-color: #00b0ff;
+}
+
+.card-container .card.card-deeppurple .front {
+    color: white;
+    background-color: #673ab7;
+}
+
+.card-container .card.card-lime .front {
+    color: white;
+    background-color: #cddc39;
+}
+
+.card-container .card.card-lime .front {
+    color: white;
+    background-color: #004d40;
+}
+
+.card-container .card.card-bluegrey .front {
+    color: white;
+    background-color: #455a64;
+}
+
+.card-container .card .front {
+    min-height: 135px;
+}
+
+.gamett {
+    font-family: GoboldRegular;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.timer {
+    position: relative;
+    font-family: GoboldRegular;
+    color: yellow;
+    text-align: center;
+    font-size: 16px;
+}
+
+.gameall {
+    grid-gap: 10px 0;
+    width: 100%;
+}
+
+.gameframe {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.gameframe:hover > a > .hover-img > .gamehover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gameframe2 {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gameframe2:hover > a > .hover-img > .gamehover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gameframe3 {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.gameframe3:hover > a > .hover-img > .gamehover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gamehover {
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.gameimg {
+    width: 135px;
+    height: 110px !important;
+    display: block;
+    z-index: 98;
+}
+
+.new {
+    /*position: absolute;*/
+    width: 37px;
+    /*top: 179px;*/
+    margin-left: 48px;
+    z-index: 100;
+    margin-bottom: -20px;
+    margin-top: -15px;
+}
+
+.backminigame {
+    overflow: hidden;
+    background: #25b488;
+    background: -moz-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, #25b488),
+        color-stop(100%, #19a0ce)
+    );
+    background: -webkit-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -o-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -ms-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: linear-gradient(to right, #25b488 0%, #19a0ce 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e9fbe', endColorstr='#4cc7b7', GradientType=1);
+    margin-bottom: 10px;
+}
+
+.backpools {
+    overflow: hidden;
+    background: #854e92;
+    background: -moz-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, #854e92),
+        color-stop(100%, #124f92)
+    );
+    background: -webkit-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -o-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -ms-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: linear-gradient(to right, #854e92 0%, #124f92 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e9fbe', endColorstr='#4cc7b7', GradientType=1);
+    margin-bottom: 10px;
+}
+
+.backminigame2 {
+    overflow: hidden;
+    background: #25b488;
+    background: -moz-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, #25b488),
+        color-stop(100%, #19a0ce)
+    );
+    background: -webkit-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -o-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: -ms-linear-gradient(left, #25b488 0%, #19a0ce 100%);
+    background: linear-gradient(to right, #25b488 0%, #19a0ce 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e9fbe', endColorstr='#4cc7b7', GradientType=1);
+    background-image: url("../../assets/img/livegamedwtg.jpg") !important;
+    background-size: 100% 100% !important;
+    border-radius:5px;
+    background-position-x: center;
+}
+
+.backpools2 {
+    overflow: hidden;
+    background: #854e92;
+    background: -moz-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, #854e92),
+        color-stop(100%, #124f92)
+    );
+    background: -webkit-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -o-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: -ms-linear-gradient(left, #854e92 0%, #124f92 100%);
+    background: linear-gradient(to right, #854e92 0%, #124f92 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e9fbe', endColorstr='#4cc7b7', GradientType=1);
+    background-image: url("../../assets/img/poolsdwtg.jpg") !important;
+    background-size: 100% 100% !important;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.angka-keluar {
+    color: aqua;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.gameslot {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+.slot-header {
+    color: #fff;
+    margin-bottom: 15px;
+}
+.slot-header img {
+    border-radius: 4px;
+    position: relative;
+    bottom: 3px;
+}
+.slot-header span {
+    font-size: 19px;
+}
+.slot-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.gameslot-game {
+    position: relative;
+}
+.gameslot-game img {
+    width: 100%;
+}
+.gameslot-game .gameframe3 {
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+.gameslot-game button {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    right: 10px;
+    bottom: 10px;
+    width: 86px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    background: #1faaae;
+}
+.gameslot-game button:hover {
+    opacity: 0.9;
+}
+
+.bg-sprite-pools{
+    background-image: url('/assets/img/logo/gameplay/sprite-pool.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 80px !important;
+    width: 100%;
+}
+
+.bg-sprite-pools-hover,
+.bg-sprite-live-hover,
+.bg-sprite-game-hover{
+    width: 100%;
+    height: 80px !important;;
+    background-image: url('/assets/img/logo/gameplay/sprite-pool.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    background-position: center 0px;
+    transition: 300ms ease-out;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+}
+
+.bg-sprite-pools-hover:hover,
+.bg-sprite-live-hover:hover,
+.bg-sprite-game-hover:hover{
+    opacity: 1;
+}
+
+.bg-sprite-pools:hover {
+    opacity: 0;
+}
+
+/* .bg-sprite-pools:hover .bg-sprite-pools-hover {
+    opacity: 1;
+} */
+.pools-4dtotomacau {
+    background-position: center -105px;
+}
+
+.pools-5dtotomacau{
+    background-position: center -5060px;
+}
+
+.pools-4dsingapore {
+    background-position: center -211px;
+}
+
+.pools-4dhongkong {
+    background-position: center -316px;
+}
+
+.pools-4dsydney {
+    background-position: center -422px;
+}
+
+.pools-4djakarta {
+    background-position: center -528px;
+}
+
+.pools-4djowopools {
+    background-position: center -634px;
+}
+
+.pools-4dsaigontoto {
+    background-position: center -740px;
+}
+
+.pools-4dtaipei101 {
+    background-position: center -845px;
+}
+
+.pools-4dwestasia {
+    background-position: center -951px;
+}
+
+.pools-4deastasia {
+    background-position: center -1047px;
+}
+
+.pools-4dsoutheast {
+    background-position: center -1162px;
+}
+
+.pools-4dsouthasia {
+    background-position: center -1267px;
+}
+
+.pools-4dcentralasia {
+    background-position: center -1373px;
+}
+
+.pools-4dasiapacific {
+    background-position: center -1479px;
+}
+
+.pools-4dbullseye {
+    background-position: center -1584px;
+}
+
+.pools-4dcaribbean {
+    background-position: center -1690px;
+}
+
+.pools-4dcarolina {
+    background-position: center -1796px;
+}
+
+.pools-4dgeorgia {
+    background-position: center -1900px;
+}
+
+.pools-4dkentucky {
+    background-position: center -2007px;
+}
+
+.pools-4dmagnum {
+    background-position: center -2112px;
+}
+
+.pools-4dmissouri {
+    background-position: center -2218px;
+}
+
+.pools-4dnewjersey {
+    background-position: center -2324px;
+}
+
+.pools-4doregon {
+    background-position: center -2430px;
+}
+
+.pools-4dpcso {
+    background-position: center -2538px;
+}
+
+.pools-4dpennsylvania {
+    background-position: center -2640px;
+}
+
+.pools-4dtrinidad {
+    background-position: center -2746px;
+}
+
+.pools-4dvirginia {
+    background-position: center -2852px;
+}
+
+.pools-5djakarta{
+    background-position: center -2954px;
+}
+/*  */
+.pools-5dsaigontoto {
+    background-position: center -3056px;
+}
+
+.pools-5dtaipei101 {
+    background-position: center -3159px;
+}
+
+.pools-5dflorida{
+    background-position: center -3265px
+}
+
+.pools-5dgeorgia {
+    background-position: center -3370px;
+}
+
+.pools-5dgermany {
+    background-position: center -3476px;
+}
+
+.pools-5dxsmb {
+    background-position: center -3582px;
+}
+
+.pools-3darizona {
+    background-position: center -3687px;
+}
+
+.pools-3darkansas {
+    background-position: center -3793px;
+}
+
+.pools-3dcalifornia {
+    background-position: center -3898px;
+}
+/*  */
+.pools-3dcolorado {
+    background-position: center -4004px;
+}
+
+.pools-3dflorida {
+    background-position: center -4110px;
+}
+
+.pools-3dmichigan {
+    background-position: center -4215px;
+}
+
+.pools-3dnewyork {
+    background-position: center -4321px;
+}
+
+.pools-3dohio {
+    background-position: center -4427px;
+}
+
+.pools-3doklahoma {
+    background-position: center -4532px;
+}
+
+.pools-3dpcso {
+    background-position: center -4638px;
+}
+
+.pools-3dtennessee {
+    background-position: center -4743px;
+}
+
+.pools-3dtexas {
+    background-position: center -4849px;
+}
+
+.pools-3dwashington {
+    background-position: center -4955px;
+}
+/*  */
+.pools-totomacau{
+    background-position: center -130px;
+}
+
+/*
+.pools-p-5d{
+    background-position: center 3px;
+} */
+
+.bg-sprite-shio{
+    width: 100%;
+    height: 80px !important;;
+    background-image: url('/assets/img/logo/gameplay/sprite-shio.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+}
+
+.shio-ayam{
+    background-position: center 0px;
+}
+
+.shio-kambing{
+    background-position: center -106px;
+}
+
+.shio-harimau{
+    background-position: center -212px;
+}
+
+.shio-naga{
+    background-position: center -328px;
+}
+
+.shio-tikus{
+    background-position: center -434px;
+}
+
+.shio-kelinci {
+    background-position: center -539px;
+}
+
+.shio-kerbau{
+    background-position: center -646px;
+}
+
+.bg-sprite-live{
+    width: 100%;
+    background-image: url('/assets/img/logo/gameplay/sprite-live.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 80px !important;;
+}
+
+.live-europeroulette1 {
+    background-position: center -3007px;
+}
+
+.live-europebaccarat {
+    background-position: center -2905px;
+}
+
+.live-baccarat{
+    background-position: center -174px;
+}
+
+.live-12d{
+    background-position: center -597px;
+}
+
+.live-headtail{
+    background-position: center -1230px;
+}
+
+.live-redwhite{
+    background-position: center -491px;
+}
+
+.live-suwit{
+    background-position: center -913px;
+}
+
+.live-dragontiger{
+    background-position: center -385px;
+}
+
+.live-dragontigerwild{
+    background:  url('/assets/img/logo/gameplay/dragontigerwild.png');
+    background-size: cover;
+}
+
+.live-roulette2-fast{
+    background-position: center -280px;
+}
+
+.live-oglok{
+    background-position: center -702px  ;
+}
+
+.live-pokerdice{
+    background-position: center -808px;
+}
+
+.live-monopoly{
+    background-position: center -1019px;
+}
+
+.live-48d{
+    background-position: center -1124px;
+}
+
+.live-idn4stand{
+    background-position: center -1333px;
+}
+
+.live-billiards{
+    background-position: center -1442px;
+}
+
+.live-gongball{
+    background-position: center -1547px;
+}
+
+.live-niuniu{
+    background-position: center -1652px;
+}
+
+.live-fantan{
+    background-position: center -1756px;
+}
+
+.live-raceball{
+    background-position: center -1864px;
+}
+
+.live-shiofights{
+    background-position: center -1970px;
+}
+
+.live-3dshio{
+    background-position: center -2075px;
+}
+
+.live-5dball{
+    background-position: center -2181px;
+}
+
+.live-sicboball-fast{
+    background-position: center -2286px;
+}
+
+.live-gongballjitu{
+    background-position: center -2392px;
+}
+
+.live-bingosicbo{
+    background-position: center -2497px;
+}
+
+.live-xocdia{
+    background-position: center -2603px;
+}
+
+.live-dueldice{
+    background-position: center -2709px;
+}
+
+.live-grandprix {
+    background-position: center -2804px;
+}
+
+.bg-sprite-game{
+    width: 100%;
+    background-image: url('/assets/img/logo/gameplay/sprite-game.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 80px !important;;
+}
+
+.game-roulette{
+    background-position: center 3px;
+}
+
+.game-24dspin{
+    background-position: center -106px;
+}
+
+.game-sicbodice{
+    background-position: center -212px;
+}
+
+.game-24d{
+    background-position: center -318px;
+}
+
+.game-dice6{
+    background-position: center -424px;
+}
+
+.slot-games{
+    display: block;
+    width: 256px;
+    height: 117px;
+    background: url('/assets/img/logo/gameplay/sprite-slot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slot-idnslot{
+    background-position: center 0;
+}
+
+.slot-lottery{
+    background-position: center -164px;
+}
+
+.slot-pragmatic{
+    background-position: center -326px;
+}
+
+.slot-pgsoft{
+    background-position: center -489px;
+}
+
+.slot-habanero{
+    background-position: center -652px;
+}
+
+.slot-jdb{
+    background-position: center -816px;
+}
+
+.slot-toptrendgaming{
+    background-position: center -979px;
+}
+
+.slot-playngo{
+    background-position: center -1142px;
+}
+
+.slot-isoftbet{
+    background-position: center -1305px;
+}
+
+.slot-gioco{
+    background-position: center -1470px;
+}
+
+.slot-gameplay{
+    background-position: center -1632px;
+}
+
+.slot-bg{
+    background-position: center -1794px;
+}
+
+.slot-aws{
+    background-position: center -1958px;
+}
+
+.slot-microgaming{
+    background-position: center -2120px;
+}
+
+.slot-booming{
+    background-position: center -2284px;
+}
+
+.slot-playson{
+    background-position: center -2447px;
+}
+
+.slot-gameart{
+    background-position: center -2610px;
+}
+
+.slot-jokergame{
+    background-position: center -2773px;
+}
+
+.game-all{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+.gameframe2,
+.gameframe3,
+.gameframe{
+    width: 107px;
+}
+
+.gameslot-content{
+    width: 256px;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-container{
+        flex-direction: column;
+    }
+}
+
+.slot-content{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly !important;
+}
+
+
+@media (min-width: 1372px) and (max-width: 1451px) {
+    .gameslot-content {
+        width: 200px;
+    }
+    .slot-games{
+        width: 200px;
+        height: 92px;
+    }
+
+    .slot-idnslot{
+        background-position: center 0;
+    }
+
+    .slot-lottery{
+        background-position: center -127px;
+    }
+
+    .slot-pragmatic{
+        background-position: center -255px;
+    }
+
+    .slot-pgsoft{
+        background-position: center -382px;
+    }
+
+    .slot-habanero{
+        background-position: center -509px;
+    }
+
+    .slot-jdb{
+        background-position: center -638px;
+    }
+
+    .slot-toptrendgaming{
+        background-position: center -765px;
+    }
+
+    .slot-playngo{
+        background-position: center -892px;
+    }
+
+    .slot-isoftbet{
+        background-position: center -1020px;
+    }
+
+    .slot-gioco{
+        background-position: center -1148px;
+    }
+
+    .slot-gameplay{
+        background-position: center -1275px;
+    }
+
+    .slot-bg{
+        background-position: center -1402px;
+    }
+
+    .slot-aws{
+        background-position: center -1529px;
+    }
+
+    .slot-microgaming{
+        background-position: center -1657px;
+    }
+
+    .slot-booming{
+        background-position: center -1784px;
+    }
+
+    .slot-playson{
+        background-position: center -1912px;
+    }
+
+    .slot-gameart{
+        background-position: center -2039px;
+    }
+
+    .slot-jokergame{
+        background-position: center -2166px;
+    }
+    .gameslot-game button {
+        bottom: 9px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 1451px) and (max-width: 1710px) {
+    .gameslot-content {
+        width: 213px;
+    }
+    .slot-games{
+        width: 213px;
+        height: 98px;
+    }
+    .slot-idnslot{
+        background-position: center 0;
+    }
+
+    .slot-lottery{
+        background-position: center -135px;
+    }
+
+    .slot-pragmatic{
+        background-position: center -272px;
+    }
+
+    .slot-pgsoft{
+        background-position: center -407px;
+    }
+
+    .slot-habanero{
+        background-position: center -542px;
+    }
+
+    .slot-jdb{
+        background-position: center -678px;
+    }
+
+    .slot-toptrendgaming{
+        background-position: center -814px;
+    }
+
+    .slot-playngo{
+        background-position: center -950px;
+    }
+
+    .slot-isoftbet{
+        background-position: center -1086px;
+    }
+
+    .slot-gioco{
+        background-position: center -1221px;
+    }
+
+    .slot-gameplay{
+        background-position: center -1357px;
+    }
+
+    .slot-bg{
+        background-position: center -1493px;
+    }
+
+    .slot-aws{
+        background-position: center -1628px;
+    }
+
+    .slot-microgaming{
+        background-position: center -1764px;
+    }
+
+    .slot-booming{
+        background-position: center -1900px;
+    }
+
+    .slot-playson{
+        background-position: center -2036px;
+    }
+
+    .slot-gameart{
+        background-position: center -2172px;
+    }
+
+    .slot-jokergame{
+        background-position: center -2307px;
+    }
+    .gameslot-game button {
+        bottom: 8px;
+        width: 74px;
+        height: 27px;
+    }
+}
+
+.flex-gameall{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bg-wlb2c-pools{
+    background-image: url('/assets/img/wlb2c/toto/sprite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 88px !important;
+    /* height: 116px !important; */
+    width: 100%;
+    border-radius: 5px;
+}
+
+.wlb2c-pools-4dtotomacau {
+    background-position: center -3865px;
+}
+
+.wlb2c-pools-5dtotomacau{
+    background-position: center -4744px;
+}
+
+.wlb2c-pools-4dsingapore {
+    background-position: center -3426px;
+}
+
+.wlb2c-pools-4dhongkong {
+    background-position: center -1757px;
+}
+
+.wlb2c-pools-4dsydney {
+    background-position: center -3690px;
+}
+
+.wlb2c-pools-4djakarta {
+    background-position: center -1845px;
+}
+
+.wlb2c-pools-4djowopools {
+    background-position: center -1933px;
+}
+
+.wlb2c-pools-4dsaigontoto {
+    background-position: center -2636px;
+}
+
+.wlb2c-pools-4dtaipei101 {
+    background-position: center -3777px;
+}
+
+.wlb2c-pools-4dwestasia {
+    background-position: center -4128px;
+}
+
+.wlb2c-pools-4deastasia {
+    background-position: center -1581px;
+}
+
+.wlb2c-pools-4dsoutheast {
+    background-position: center -3601px;
+}
+
+.wlb2c-pools-4dsouthasia {
+    background-position: center -3514px;
+}
+
+.wlb2c-pools-4dcentralasia {
+    background-position: center -1493px;
+}
+
+.wlb2c-pools-4dasiapacific {
+    background-position: center -1142px;
+}
+
+.wlb2c-pools-4dbullseye {
+    background-position: center -1230px;
+}
+
+.wlb2c-pools-4dcaribbean {
+    background-position: center -1318px;
+}
+
+.wlb2c-pools-4dcarolina {
+    background-position: center -1406px;
+}
+
+.wlb2c-pools-4dgeorgia {
+    background-position: center -1669px;
+}
+
+.wlb2c-pools-4dkentucky {
+    background-position: center -2020px;
+}
+
+.wlb2c-pools-4dmagnum4d {
+    background-position: center -2108px;
+}
+
+.wlb2c-pools-4dmissouri {
+    background-position: center -2196px;
+}
+
+.wlb2c-pools-4dnewjersey {
+    background-position: center -2284px;
+}
+
+.wlb2c-pools-4doregon {
+    background-position: center -2372px;
+}
+
+.wlb2c-pools-4dpcso {
+    background-position: center -2460px;
+}
+
+.wlb2c-pools-4dpennsylvania {
+    background-position: center -2548px;
+}
+
+.wlb2c-pools-asiapacific {
+    background-position: center -1142px;
+}
+
+.wlb2c-pools-4dtrinidad {
+    background-position: center -3953px;
+}
+
+.wlb2c-pools-4dvirginia {
+    background-position: center -4041px;
+}
+
+.wlb2c-pools-5djakarta{
+    background-position: center -4480px;
+}
+/*  */
+.wlb2c-pools-5dsaigontoto {
+    background-position: center -4568px;
+}
+
+.wlb2c-pools-5dtaipei101 {
+    background-position: center -4655px;
+}
+
+.wlb2c-pools-5dflorida{
+    background-position: center -4216px
+}
+
+.wlb2c-pools-5dgeorgia {
+    background-position: center -4305px;
+}
+
+.wlb2c-pools-5dgermany {
+    background-position: center -4392px;
+}
+
+.wlb2c-pools-5dxsmb {
+    background-position: center -4832px;
+}
+
+.wlb2c-pools-3darizona {
+    background-position: center 0;
+}
+
+.wlb2c-pools-3darkansas {
+    background-position: center -88px;
+}
+
+.wlb2c-pools-3dcalifornia {
+    background-position: center -176px;
+}
+/*  */
+.wlb2c-pools-3dcolorado {
+    background-position: center -264px;
+}
+
+.wlb2c-pools-3dflorida {
+    background-position: center -352px;
+}
+
+.wlb2c-pools-3dmichigan {
+    background-position: center -440px;
+}
+
+.wlb2c-pools-3dnewyork {
+    background-position: center -527px;
+}
+
+.wlb2c-pools-3dohio {
+    background-position: center -615px;
+}
+
+.wlb2c-pools-3doklahoma {
+    background-position: center -703px;
+}
+
+.wlb2c-pools-3dpcso {
+    background-position: center -790px;
+}
+
+.wlb2c-pools-3dtennessee {
+    background-position: center -879px;
+}
+
+.wlb2c-pools-3dtexas {
+    background-position: center -967px;
+}
+
+.wlb2c-pools-3dwashington {
+    background-position: center -1054px;
+}
+
+.wlb2c-pools-totomacau{
+    background-position: center -130px;
+}
+
+.wlb2c-shio-ayam{
+    background-position: center -2811px;
+}
+
+.wlb2c-shio-kambing{
+    background-position: center -2987px;
+}
+
+.wlb2c-shio-harimau{
+    background-position: center -2899px;
+}
+
+.wlb2c-shio-naga{
+    background-position: center -3250px;
+}
+
+.wlb2c-shio-tikus{
+    background-position: center -3338px;
+}
+
+.wlb2c-shio-kelinci {
+    background-position: center -3074px;
+}
+
+.wlb2c-shio-kerbau{
+    background-position: center -3163px;
+}
+
+.bg-minigame-live{
+    background-image: url('/assets/img/wlb2c/minigame/sprite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 135px !important;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.minigame-live-baccarat {
+    background-position: center -796px;
+}
+
+.minigame-live-12d{
+    background-position: center -264px;
+}
+
+.minigame-live-24d {
+    background-position: center -530px;
+}
+
+.minigame-live-24dspin{
+    background-position: center -396px;
+}
+
+.minigame-live-dice6 {
+    background-position: center -1192px;
+}
+
+.minigame-live-sicbodice {
+    background-position: center -4238px;
+}
+
+.minigame-live-headtail {
+    background-position: center -1987px;
+}
+
+.minigame-live-redwhite {
+    background-position: center -3179px;
+}
+
+.minigame-live-suwit {
+    background-position: center -4636px;
+}
+
+.minigame-live-dragontiger {
+    background-position: center -1324px;
+}
+
+.minigame-live-roulette{
+    background-position: center -3298px;
+}
+
+.minigame-live-roulette2-fast {
+    background-position: center -3576px;
+}
+
+.minigame-live-oglok {
+    background-position: center -2781px;
+}
+
+.minigame-live-pokerdice {
+    background-position: center -2914px;
+}
+
+.minigame-live-monopoly {
+    background-position: center -2517px;
+}
+
+.minigame-live-48d {
+    background-position: center -662px;
+}
+
+.minigame-live-idn4stand {
+    background-position: center -2120px;
+}
+
+.minigame-live-billiards {
+    background-position: center -928px;
+}
+
+.minigame-live-gongball {
+    background-position: center -1722px;
+}
+
+.minigame-live-niuniu {
+    background-position: center -1722px;
+}
+
+.minigame-live-fantan {
+    background-position: center -1590px;
+}
+
+.minigame-live-raceball {
+    background-position: center -3046px;
+}
+
+.minigame-live-shiofights {
+    background-position: center -3974px;
+}
+
+.minigame-live-3dshio{
+    background-position: center 0px;
+}
+
+.minigame-live-5dball{
+    background-position: center -132px;
+}
+
+.minigame-live-sicboball-fast {
+    background-position: center -4504px;
+}
+
+.minigame-live-gongballjitu {
+    background-position: center -1854px;
+}
+
+.minigame-live-bingosicbo {
+    background-position: center -1060px;
+}
+
+.minigame-live-xocdia{
+    background-position: center -2545px;
+}
+
+.minigame-live-dueldice {
+    background-position: center -1458px;
+}
+
+.box-live{
+    width: 196px !important
+}
+
+.box-pools{
+    width: 192px !important
+}
+
+.pageheader{
+    padding: 0;
+}
+
+.togel88.box-live,
+.togel88.gameslot-content{
+    width: 192px !important
+}
+
+.bg-togel88-live{
+    background-image: url('/assets/img/wt/banner/togel88-sprite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 300ms ease-out;
+    height: 88px !important;
+    width: 100%;
+}
+
+.togel88-live-baccarat{
+    background-position: center -439px;
+}
+
+.togel88-live-12d{
+    background-position: center -176px;
+}
+
+.togel88-live-24d{
+    background-position: center -264px;
+}
+
+.togel88-live-24dspin{
+    background-position: center -264px;
+}
+
+.togel88-live-dice6{
+    background-position: center -703px;
+}
+
+.togel88-live-sicbodice{
+    background-position: center -2196px;
+}
+
+.togel88-live-headtail{
+    background-position: center -1142px;
+}
+
+.togel88-live-redwhite{
+    background-position: center -1757px;
+}
+
+.togel88-live-suwit{
+    background-position: center -2372px;
+}
+
+.togel88-live-dragontiger{
+    background-position: center -791px;
+}
+
+.togel88-live-roulette1{
+    background-position: center -1845px;
+}
+
+.togel88-live-roulette2-fast{
+    background-position: center -1933px;
+}
+
+.togel88-live-oglok{
+    background-position: center -1493px;
+}
+
+.togel88-live-pokerdice{
+    background-position: center -1581px;
+}
+
+.togel88-live-monopoly{
+    background-position: center -1318px;
+}
+
+.togel88-live-48d{
+    background-position: center -351px;
+}
+
+.togel88-live-idn4stand{
+    background-position: center -1230px;
+}
+
+.togel88-live-billiards{
+    background-position: center -527px;
+}
+
+.togel88-live-gongball{
+    background-position: center -966px;
+}
+
+.togel88-live-niuniu{
+    background-position: center -1405px;
+}
+
+.togel88-live-fantan{
+    background-position: center -878px;
+}
+
+.togel88-live-raceball{
+    background-position: center -1669px;
+}
+
+.togel88-live-shiofights{
+    background-position: center -2108px;
+}
+
+.togel88-live-3dshio{
+    background-position: center 0px;
+}
+
+.togel88-live-5dball{
+    background-position: center -88px;
+}
+
+.togel88-live-sicboball-fast{
+    background-position: center -2284px;
+}
+
+.togel88-live-gongballjitu{
+    background-position: center -1054px;
+}
+
+.togel88-live-bingosicbo{
+    background-position: center -615px;
+}
+
+.togel88-live-xocdia{
+    background-position: center -2545px;
+}
+
+.togel88-live-dueldice{
+    background-position: center -2723px;
+}
+
+.togel88.gameslot-content .gameslot-game{
+    width: unset !important;
+    height: unset !important;
+}
+
+.slot-togel88-games{
+    display: block;
+    width: 100%;
+    height: 88px;
+    background: url('/assets/img/logo/gameplay/sprite-slot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.slot-togel88-idnslot{
+    background-position: center 0;
+}
+
+.slot-togel88-lottery{
+    background-position: center -122px;
+}
+
+.slot-togel88-pragmatic{
+    background-position: center -245px;
+}
+
+.slot-togel88-pgsoft{
+    background-position: center -367px;
+}
+
+.slot-togel88-habanero{
+    background-position: center -489px;
+}
+
+.slot-togel88-jdb{
+    background-position: center -612px;
+}
+
+.slot-togel88-toptrendgaming{
+    background-position: center -735px;
+}
+
+.slot-togel88-playngo{
+    background-position: center -856px;
+}
+
+.slot-togel88-isoftbet{
+    background-position: center -979px;
+}
+
+.slot-togel88-gioco{
+    background-position: center -1102px;
+}
+
+.slot-togel88-gameplay{
+    background-position: center -1223px;
+}
+
+.slot-togel88-bg{
+    background-position: center -1345px;
+}
+
+.slot-togel88-aws{
+    background-position: center -1468px;
+}
+
+.slot-togel88-microgaming{
+    background-position: center -1590px;
+}
+
+.slot-togel88-booming{
+    background-position: center -1713px;
+}
+
+.slot-togel88-playson{
+    background-position: center -1835px;
+}
+
+.slot-togel88-gameart{
+    background-position: center -1958px;
+}
+
+.slot-togel88-jokergame{
+    background-position: center -2080px;
+}
+.game-lobby-icon:hover{
+    filter: brightness(70%);
+}

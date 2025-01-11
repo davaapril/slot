@@ -1,0 +1,25 @@
+select,
+input,
+.black {
+	color: #000;
+}
+
+.label.label-transparent-black {
+  display: inline !important;
+}
+
+.navbar .navbar-nav.quick-actions .dropdown .dropdown-menu > li > a i {
+  line-height: 17px;
+}
+
+@media only screen and (max-width: 1024px) {
+	body .lefv {
+	    left: 73px !important;
+	  }
+}
+
+@media only screen and (max-width: 992px) {
+  .label.label-transparent-black {
+    display: none !important;
+  }
+}

@@ -1,0 +1,335 @@
+var interval_first, interval_second;
+let domainLobby = $("#lobbyDomain").val();
+let microtimeRoute = $("#routeMicrotime").val();
+
+$(document).ready(function() {
+    var timer_value = [];
+    var timer_text = [];
+    var timer_second = [];
+    var timer_minute = [];
+    var timer_hour = [];
+    var no = [];
+    var firsttime = [];
+
+    function gettimer(sar) {
+        return;
+        var dataString = {};
+        var gettimer = "";
+        dataString["sar"] = sar;
+        $.ajax({
+            type: "POST",
+            url: "ajax_timerpools.php",
+            data: dataString,
+            success: function(data2) {
+                $("#timer" + sar).val(data2);
+            }
+        });
+
+        return $("#timer" + sar).val();
+    }
+
+    function recheckOpen() {
+        var getsar = $("#loadtimer").val();
+        if (typeof getsar !== "undefined") {
+            var pasar = getsar.split(",");
+
+            for (var i = 0; i < pasar.length - 1; i++) {
+                sar = pasar[i];
+                if (
+                    timer_text[i] == "" ||
+                    timer_text[i] == "BET CLOSED" ||
+                    timer_text[i] == "00:00"
+                ) {
+                    timer_value[i] = gettimer(sar);
+                }
+            }
+        }
+    }
+
+    interval_first = setInterval(function() {
+        recheckOpen();
+    }, 45000);
+
+    function reloadTime() {
+        var getsar = $("#loadtimer").val();
+        if (typeof getsar !== "undefined") {
+            var pasar = getsar.split(",");
+
+            for (var i = 0; i < pasar.length - 1; i++) {
+                sar = pasar[i];
+                if (typeof timer_text[i] == "undefined") {
+                    timer_value.push("");
+                    timer_text.push("");
+                    timer_second.push("0");
+                    timer_minute.push("0");
+                    timer_hour.push("0");
+                    no.push(0);
+                }
+                no[i]++;
+                if (timer_value[i] == "") {
+                    timer_value[i] = document.getElementById(
+                        "timer" + sar
+                    ).value;
+                }
+                if (timer_value[i] != "") {
+                    if (timer_value[i] > 0) {
+                        timer_minute[i] = Math.floor(timer_value[i] / 60);
+                        timer_hour[i] = Math.floor(timer_minute[i] / 60);
+                        if (timer_hour[i] <= 9) {
+                            timer_hour[i] = "0" + timer_hour[i];
+                        }
+                        timer_minute[i] = timer_minute[i] % 60;
+                        if (timer_minute[i] <= 9) {
+                            timer_minute[i] = "0" + timer_minute[i];
+                        }
+                        timer_second[i] = timer_value[i] % 60;
+                        if (timer_second[i] <= 9) {
+                            timer_second[i] = "0" + timer_second[i];
+                        }
+                        timer_text[i] =
+                            timer_hour[i] +
+                            ":" +
+                            timer_minute[i] +
+                            ":" +
+                            timer_second[i];
+                    } else if (
+                        (timer_value[i] <= 0 ||
+                            timer_value[i] == "BET CLOSED") &&
+                        no[i] > 1
+                    ) {
+                        timer_text[i] = "BET CLOSED";
+                    }
+                    timer_value[i]--;
+                    $("#loadtimer" + sar).html(timer_text[i]);
+                    if (timer_text[i] == "BET CLOSED") {
+
+                        if($("#loadtimer" + sar).attr('data-brand') == 'togel88'){
+                            $("#loadtimer" + sar).css(
+                                "cssText",
+                                "font-weight:bold;width:9em;padding:7px;margin-left: 3px;border-radius:5px;border:1px solid black;color: red !important;"
+                            );
+                        }else {
+                            $("#loadtimer" + sar).css(
+                                "cssText",
+                                "font-weight:bold;width:98%;padding-top:3px;margin-left: 2px;border-radius:5px;border:1px solid black;color: red !important;"
+                            );
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    interval_second = setInterval(function() {
+        reloadTime();
+    }, 1000);
+});
+
+$(function() {
+    // Initialize card flip
+    $(".card.hover").hover(
+        function() {
+            $(this).addClass("flip");
+        },
+        function() {
+            $(this).removeClass("flip");
+        }
+    );
+});
+
+function GetBrowserVersion() {
+    var ua = navigator.userAgent,
+        tem,
+        M =
+            ua.match(
+                /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
+            ) || [];
+    if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return {
+            name: "IE",
+            version: tem[1] || ""
+        };
+    }
+    if (M[1] === "Chrome") {
+        tem = ua.match(/\bOPR\/(\d+)/);
+        if (tem != null) {
+            return {
+                name: "Opera",
+                version: tem[1]
+            };
+        }
+    }
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, "-?"];
+    if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+        M.splice(1, 1, tem[1]);
+    }
+    return {
+        name: M[0],
+        version: M[1]
+    };
+}
+
+var findGetParameter = parameterName => {
+    var result = null,
+        tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+};
+var loadPage = (endPoint = "", gameUrl = "") => {
+    var browser = GetBrowserVersion();
+    var isHTML5 = true;
+    var ua = navigator.userAgent.toLowerCase();
+    var game = gameUrl;
+    switch (browser.name) {
+        case "Chrome":
+            isHTML5 = parseInt(browser.version) < 40 ? false : true;
+            break;
+
+        case "Opera":
+            isHTML5 = parseInt(browser.version) < 30 ? false : true;
+            break;
+
+        case "Firefox":
+            isHTML5 = parseInt(browser.version) < 40 ? false : true;
+            break;
+
+        case "Edge":
+            isHTML5 = parseInt(browser.version) < 13 ? false : true;
+            break;
+
+        case "IE":
+            isHTML5 = false;
+            break;
+
+        case "Safari":
+            isHTML5 = parseInt(browser.version) < 10 ? false : true;
+            break;
+    }
+
+    isHTML5 = ua.indexOf("windows nt 5.1") < 1;
+    if (
+        (game && game != "undefined" && isHTML5 && game != "toto_macau") ||
+        game == "gong_ball" ||
+        game == "poker_dice" ||
+        game == "billiards"
+    ) {
+        if (browser.name != "Safari") {
+            document.getElementById("buang1").setAttribute("class", "hidden");
+            document.getElementById("buang2").setAttribute("class", "hidden");
+            document.getElementById("buang3").setAttribute("class", "hidden");
+            fetch(microtimeRoute, {
+                method: "GET"
+            })
+                .then(function(res) {
+                    return res.json();
+                })
+                .then(function(data) {
+                    $("#inputForMicrotime").val(data);
+                    $("#mainGame").attr(
+                        "src",
+                        domainLobby + "/game/" + game + "/" + data
+                    );
+                });
+            $(".game-wrapper").attr("class", "col-md-12 game-wrapper");
+            $("#content2").attr("class", "col-md-12 game-hide");
+            $("#content").attr("class", "col-md-12 navigatepage");
+        } else {
+            fetch(microtimeRoute, {
+                method: "GET"
+            })
+                .then(function(res) {
+                    return res.json();
+                })
+                .then(function(data) {
+                    $("#inputForMicrotime").val(data);
+                    //$("#mainGame").attr("src", "<?= config('domainlobby') ?>/game/"+ game +"/"+data);
+                    popup(domainLobby + "/game/" + game + "/" + data);
+                });
+        }
+        // $("#mainGame").attr("src", "<?= config('domainlobby') ?>/game/"+ game +"/<?php echo '$auth'; ?>");
+    } else {
+        $(".mask").css({
+            display: ""
+        });
+        $("#loader").css({
+            display: ""
+        });
+        document.getElementById("buang1").setAttribute("class", "");
+        document
+            .getElementById("buang2")
+            .setAttribute("class", "nolisttypes inlineSelect inline cyan");
+        document.getElementById("buang3").setAttribute("class", "");
+        $("#mainGame").attr("src", "");
+        $(".game-wrapper").attr("class", "col-md-12 game-wrapper game-hide");
+        $("#content2").attr("class", "col-md-12");
+        $("#content").attr("class", "col-md-12 navigatepage");
+        clearInterval(interval_first);
+        clearInterval(interval_second);
+        let currentEndpoint = endPoint;
+        $("#content2")
+            .hide()
+            .load(currentEndpoint, function() {
+                $("#content2").show();
+                $(".mask").css({
+                    display: "none"
+                });
+                $("#loader").css({
+                    display: "none"
+                });
+            });
+    }
+};
+
+$(function() {
+    $(
+        ".menu a, .gameframe a, .gameframe2 a, .gameframe3 a, .gameframe4 .image-box a, .card a, .navigatepage a"
+    ).click(function(e) {
+        e.preventDefault();
+        let events = $(this).attr("onclick");
+        let load = true;
+        if (typeof events !== 'undefined' && events !== false) {
+            if (events.search("toSlot") >= 0) {
+               load = false;
+            }
+        }
+
+        if (load) {
+            loadPage(
+                $(this).attr("href"),
+                $(this).data("url")
+                    ? $(this)
+                          .data("url")
+                          .toLowerCase()
+                    : ""
+            );
+            return false;
+        }
+    });
+});
+$(document).ready(function() {
+    $("div#content").css({
+        overflow: "hidden",
+        outline: "none",
+        "padding-left": "55px"
+    });
+    let hasPageParams = findGetParameter("page");
+    if (hasPageParams) {
+        loadPage(hasPageParams);
+    }
+    $("#content2 .gameall .gameframe3 a").click(function() {
+        $(
+            "div.navbar.navbar-default.navbar-fixed-top.navbar-transparent-black.mm-fixed-top"
+        ).addClass("collapsed");
+        $(".nav.navbar-nav.side-nav").addClass("collapsed");
+        $("div#content").css({
+            overflow: "hidden",
+            outline: "none",
+            "padding-left": "55px"
+        });
+    });
+});

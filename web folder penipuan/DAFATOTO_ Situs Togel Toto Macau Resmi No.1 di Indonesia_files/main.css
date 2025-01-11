@@ -1,0 +1,1230 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: .5em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.all-elements {
+  overflow-x: hidden;
+}
+.page-content {
+  background-color: #f5f5f5;
+  z-index: 10;
+  display: block;
+  min-height: 667px;
+}
+.page-headers {
+  background: #ffffff;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  border-bottom: 1px solid #818285;
+}
+.deploy-sidebar {
+  background-image: url(../img/ui/deploy-nav.png);
+  background-repeat: no-repeat;
+  background-position: 20px 24px;
+  background-size: 28px 19px;
+  height: 70px;
+  width: 70px;
+  z-index: 50;
+  display: block;
+  position: relative;
+}
+.deploy-back {
+  background-image: url(../img/ui/deploy-back.png);
+  background-repeat: no-repeat;
+  background-position: 20px 24px;
+  background-size: 28px 19px;
+  height: 70px;
+  width: 70px;
+  z-index: 50;
+  display: block;
+  position: relative;
+}
+.deploy-logout {
+  background-image: url(../img/ui/deploy-logout.png);
+  background-size: 36px 24px;
+  background-repeat: no-repeat;
+  background-position: 19px 22px;
+  height: 70px;
+  width: 70px;
+  float: right;
+  margin-top: -51px;
+  z-index: 50;
+}
+.deploy-home {
+  background-image: url(../img/ui/deploy-home.png);
+  background-size: 36px 24px;
+  background-repeat: no-repeat;
+  background-position: 19px 22px;
+  height: 70px;
+  width: 70px;
+  float: right;
+  margin-top: -51px;
+  z-index: 50;
+}
+.header-logo {
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  display: block;
+  position: relative;
+}
+.page-header-clear {
+  height: 70px;
+}
+.content {
+  margin: 0 auto;
+}
+.main {
+  background-color: #ebebeb;
+}
+.no-bottom {
+  margin-bottom: 0px !important;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.wrapper {
+  padding: 10px;
+}
+.panel-blue {
+  background: #1e9fbe;
+}
+.head-title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.head-title2 {
+  font-size: 20px;
+  margin-top: -22px;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.head-title3 {
+  font-size: 20px;
+  margin-top: -22px;
+  margin-bottom: 0;
+  color: #ff0000;
+  display: none;
+}
+.stream-wrapper {
+  max-height: 180px;
+  background-color: #000;
+}
+.stream-wrapper video {
+  width: 320px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+}
+ul.history-list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+ul.history-list li {
+  margin: 1px;
+  width: 28px;
+  vertical-align: middle;
+  display: inline-block;
+}
+ul.history-list li.last {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  padding-top: 10px;
+}
+ul.history-list2 {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+ul.history-list2 li {
+  margin: 1px;
+  width: 28px;
+  vertical-align: middle;
+  display: inline-block;
+}
+ul.history-list2 li.last {
+  width: 35px;
+  height: 35px;
+}
+.label {
+  padding: .3em .4em .3em;
+  font-size: 100%;
+  font-weight: 500;
+}
+.label-black {
+  background-color: #000000;
+}
+.label-red {
+  background-color: #ff0000;
+}
+.label-yellow {
+  background-color: #cbce4d;
+}
+.label-green {
+  background-color: #20a450;
+}
+.label-blue {
+  background-color: #2b3ac9;
+}
+.label-orange {
+  background-color: #cd7939;
+}
+.bet-panel {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.bet-panel .btn-bet24d {
+  width: 100%;
+}
+.bet-panel .btn-bet24dspin {
+  width: 100%;
+}
+.bet-panel .btn-betrl {
+  width: 100%;
+}
+.bet-panel .btn-betsb {
+  width: 100%;
+}
+.bet-panel .btn-bet12d {
+  width: 100%;
+}
+.bet-panel .btn-betdt {
+  width: 100%;
+}
+.bet-panel .btn-betsd {
+  width: 100%;
+}
+.bet-panel .btn-betspin24d {
+  width: 100%;
+}
+.bet-panel .btn-betog {
+  width: 100%;
+}
+.bet-panel .btn-betd6 {
+  width: 100%;
+}
+.bet-panel .btn-betswheel {
+  width: 100%;
+}
+.bet-panel .btn-bethnt {
+  width: 100%;
+}
+.bet-panel .btn-betrw {
+  width: 100%;
+}
+.bet-panel .btn-bet48d {
+  width: 100%;
+}
+.bet-panel [class*="col-"] {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+  margin-bottom: 10px;
+}
+.btn-red {
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #d43f3a;
+}
+.btn-red:focus,
+.btn-red.focus {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-red:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-red:active,
+.btn-red.active,
+.open > .dropdown-toggle.btn-red {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-red:active:hover,
+.btn-red.active:hover,
+.open > .dropdown-toggle.btn-red:hover,
+.btn-red:active:focus,
+.btn-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-red:active.focus,
+.btn-red.active.focus,
+.open > .dropdown-toggle.btn-red.focus {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.btn-black {
+  color: #fff;
+  background-color: #000000;
+  border-color: #1b1b1b;
+}
+.btn-black:focus,
+.btn-black.focus {
+  color: #fff;
+  background-color: #434242;
+  border-color: #343333;
+}
+.btn-black:hover {
+  color: #fff;
+  background-color: #434242;
+  border-color: #343333;
+}
+.btn-black:active,
+.btn-black.active,
+.open > .dropdown-toggle.btn-black {
+  color: #fff;
+  background-color: #434242;
+  border-color: #343333;
+}
+.btn-black:active:hover,
+.btn-black.active:hover,
+.open > .dropdown-toggle.btn-black:hover,
+.btn-black:active:focus,
+.btn-black.active:focus,
+.open > .dropdown-toggle.btn-black:focus,
+.btn-black:active.focus,
+.btn-black.active.focus,
+.open > .dropdown-toggle.btn-black.focus {
+  color: #fff;
+  background-color: #434242;
+  border-color: #343333;
+}
+.footer {
+  background: #ffffff;
+  font-size: 12px;
+  color: #868686;
+  border-top: 1px solid #818285;
+}
+.bet-amt {
+  color: #ff0000;
+}
+.clear {
+  clear: both;
+}
+.dice-double {
+  margin-right: 2px;
+}
+.dice-block {
+  display: block;
+}
+.dice-inblock {
+  display: inline-block;
+}
+
+/* spinwheel button color */
+.btn-color-red {
+  color: #fff;
+  background-color: #c12823;
+  border-color: #d43f3a;
+}
+.btn-color-red:focus,
+.btn-color-red.focus {
+  color: #fff;
+  background-color: #c12823;
+  border-color: #ac2925;
+}
+.btn-color-red:hover {
+  color: #fff;
+  background-color: #c12823;
+  border-color: #ac2925;
+}
+.btn-color-red:active,
+.btn-color-red.active,
+.open > .dropdown-toggle.btn-color-red {
+  color: #fff;
+  background-color: #c12823;
+  border-color: #ac2925;
+}
+.btn-color-red:active:hover,
+.btn-color-red.active:hover,
+.open > .dropdown-toggle.btn-color-red:hover,
+.btn-color-red:active:focus,
+.btn-color-red.active:focus,
+.open > .dropdown-toggle.btn-red:focus,
+.btn-color-red:active.focus,
+.btn-color-red.active.focus,
+.open > .dropdown-toggle.btn-color-red.focus {
+  color: #fff;
+  background-color: #c12823;
+  border-color: #ac2925;
+}
+.btn-color-yellow {
+  color: #fff;
+  background-color: #cbce4d;
+  border-color: #babd2a;
+}
+.btn-color-yellow:focus,
+.btn-color-yellow.focus {
+  color: #fff;
+  background-color: #cbce4d;
+  border-color: #aaad23;
+}
+.btn-color-yellow:hover {
+  color: #fff;
+  background-color: #cbce4d;
+  border-color: #aaad23;
+}
+.btn-color-yellow:active,
+.btn-color-yellow.active,
+.open > .dropdown-toggle.btn-color-yellow {
+  color: #fff;
+  background-color: #cbce4d;
+  border-color: #aaad23;
+}
+.btn-color-yellow:active:hover,
+.btn-color-yellow.active:hover,
+.open > .dropdown-toggle.btn-color-yellow:hover,
+.btn-color-yellow:active:focus,
+.btn-color-yellow.active:focus,
+.open > .dropdown-toggle.btn-yellow:focus,
+.btn-color-yellow:active.focus,
+.btn-color-yellow.active.focus,
+.open > .dropdown-toggle.btn-color-yellow.focus {
+  color: #fff;
+  background-color: #cbce4d;
+  border-color: #aaad23;
+}
+.btn-color-green {
+  color: #fff;
+  background-color: #20a450;
+  border-color: #0b953d;
+}
+.btn-color-green:focus,
+.btn-color-green.focus {
+  color: #fff;
+  background-color: #20a450;
+  border-color: #0c8638;
+}
+.btn-color-green:hover {
+  color: #fff;
+  background-color: #20a450;
+  border-color: #0c8638;
+}
+.btn-color-green:active,
+.btn-color-green.active,
+.open > .dropdown-toggle.btn-color-green {
+  color: #fff;
+  background-color: #20a450;
+  border-color: #0c8638;
+}
+.btn-color-green:active:hover,
+.btn-color-green.active:hover,
+.open > .dropdown-toggle.btn-color-green:hover,
+.btn-color-green:active:focus,
+.btn-color-green.active:focus,
+.open > .dropdown-toggle.btn-green:focus,
+.btn-color-green:active.focus,
+.btn-color-green.active.focus,
+.open > .dropdown-toggle.btn-color-green.focus {
+  color: #fff;
+  background-color: #20a450;
+  border-color: #0c8638;
+}
+.btn-color-blue {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #0f1fbd;
+}
+.btn-color-blue:focus,
+.btn-color-blue.focus {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #0b1aab;
+}
+.btn-color-blue:hover {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #0b1aab;
+}
+.btn-color-blue:active,
+.btn-color-blue.active,
+.open > .dropdown-toggle.btn-color-blue {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #0b1aab;
+}
+.btn-color-blue:active:hover,
+.btn-color-blue.active:hover,
+.open > .dropdown-toggle.btn-color-blue:hover,
+.btn-color-blue:active:focus,
+.btn-color-blue.active:focus,
+.open > .dropdown-toggle.btn-blue:focus,
+.btn-color-blue:active.focus,
+.btn-color-blue.active.focus,
+.open > .dropdown-toggle.btn-color-blue.focus {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #0b1aab;
+}
+.btn-color-orange {
+  color: #fff;
+  background-color: #cd7939;
+  border-color: #c06017;
+}
+.btn-color-orange:focus,
+.btn-color-orange.focus {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #b24e01;
+}
+.btn-color-orange:hover {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #b24e01;
+}
+.btn-color-orange:active,
+.btn-color-orange.active,
+.open > .dropdown-toggle.btn-color-orange {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #b24e01;
+}
+.btn-color-orange:active:hover,
+.btn-color-orange.active:hover,
+.open > .dropdown-toggle.btn-color-orange:hover,
+.btn-color-orange:active:focus,
+.btn-color-orange.active:focus,
+.open > .dropdown-toggle.btn-orange:focus,
+.btn-color-orange:active.focus,
+.btn-color-orange.active.focus,
+.open > .dropdown-toggle.btn-color-orange.focus {
+  color: #fff;
+  background-color: #2b3ac9;
+  border-color: #b24e01;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    table tr td{
+        color:white;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+        color:white;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+   New Added
+   May 5, 2017 12:50
+   ========================================================================== */
+.card-container .card .front .media .pools {
+  background: url(../../img/logo/pool-bg.png) no-repeat;
+  background-size: 80px 80px;
+}
+.card-container .card .front .media .ball24d {
+  background: url(../../img/logo/24d-bg.png) no-repeat;
+  background-size: 80px 80px;
+}
+.card-container .card .front .media .bola-gelinding {
+  background: url(../../img/logo/bogil-bg.png) no-repeat;
+  background-size: 80px 80px;
+}
+.card-container .card .front .media .roulette {
+  background: url(../../img/logo/roulette-bg.png) no-repeat;
+  background-size: 80px 80px;
+}
+.card-container .card .front .media .sicbo {
+  background: url(../../img/logo/sicbo-bg.png) no-repeat;
+  background-size: 80px 80px;
+}
+.card-container .card .front .media .ball24d-spin {
+    background: url(../../img/logo/24-nspin.png) no-repeat;
+    background-size: 63px 63px;
+  background-position: 10px;
+}
+.card-container .card .front .media .billiards {
+    background: url(../../img/logo/billiards.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: -10px;
+}
+.card-container .card .front .media .poker-dice {
+    background: url(../../img/logo/poker-dice.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: -10px;
+}
+.card-container .card .front .media .gong-ball {
+    background: url(../../img/logo/gong-ball.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: -10px;
+}
+.card-container .card .front .media .redwhite {
+    background: url(../../img/logo/red-white.png) no-repeat;
+    background-size: 63px 63px;
+  background-position: 10px;
+}
+.card-container .card .front .media .head-tail {
+    background: url(../../img/logo/head-tail.png) no-repeat;
+    background-size: 63px 63px;
+  background-position: 10px;
+}
+.card-container .card .front .media .oglok{
+    background: url(../../img/logo/oglok.png) no-repeat;
+    background-size: 63px 63px;
+  background-position: 10px;
+}
+.card-container .card .front .media .toto_macau {
+  background: url(../../img/logo/toto-macau.png) no-repeat;
+  background-size: 110px 80px;
+  width: 110px !important;
+}
+.card-container .card .front .media .suwit {
+  background: url(../../img/logo/suwit.png) no-repeat;
+  background-size: 110px 80px;
+  width: 110px !important;
+}
+
+.card-container .card .front .media .monopoly {
+  background: url(../../img/logo/monopoly.png) no-repeat;
+  background-size: 80px 80px;
+}
+
+
+.fa-Shio{
+  -webkit-mask-box-image: url(../../img/logo/Shio-sdbr.png);
+  mask-image: url(../../img/logo/Shio-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-TOTOMACAU{
+  -webkit-mask-box-image: url(../../img/logo/TotoMacau-sdbr.png);
+  mask-image: url(../../img/logo/TotoMacau-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-BULLSEYE{
+  -webkit-mask-box-image: url(../../img/logo/BULLSEYE-sdbr.png);
+  mask-image: url(../../img/logo/BULLSEYE-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SAIGONLOTTO{
+  -webkit-mask-box-image: url(../../img/logo/SAIGONLOTTO-sdbr.png);
+  mask-image: url(../../img/logo/SAIGONLOTTO-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SAIGONTOTO{
+  -webkit-mask-box-image: url(../../img/logo/SAIGONTOTO-sdbr.png);
+  mask-image: url(../../img/logo/SAIGONTOTO-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SYDNEY{
+  -webkit-mask-box-image: url(../../img/logo/SYDNEY-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-JOWO, .fa-JOWOPOOLS{
+  -webkit-mask-box-image: url(../../img/logo/JOWO-sdbr.png);
+  mask-image: url(../../img/logo/JOWO-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SINGAPORE{
+  -webkit-mask-box-image: url(../../img/logo/SINGAPORE-sdbr.png);
+  mask-image: url(../../img/logo/SINGAPORE-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-JAKARTA{
+  -webkit-mask-box-image: url(../../img/logo/Jakarta-sdbr.png);
+  mask-image: url(../../img/logo/Jakarta-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-HONGKONG{
+  -webkit-mask-box-image: url(../../img/logo/HONGKONG-sdbr.png);
+  mask-image: url(../../img/logo/HONGKONG-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-MAGNUM4D{
+  -webkit-mask-box-image: url(../../img/logo/MAGNUM4D-sdbr.png);
+  mask-image: url(../../img/logo/MAGNUM4D-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SYDNEY{
+  -webkit-mask-box-image: url(../../img/logo/SYDNEY-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-CAROLINA{
+  -webkit-mask-box-image: url(../../img/logo/CAROLINA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-KENTUCKY{
+  -webkit-mask-box-image: url(../../img/logo/KENTUCKY-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-MISSOURI{
+  -webkit-mask-box-image: url(../../img/logo/MISSOURI-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-NEWJERSEY{
+  -webkit-mask-box-image: url(../../img/logo/NEWJERSEY-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-OREGON{
+  -webkit-mask-box-image: url(../../img/logo/OREGON-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-VIRGINIA{
+  -webkit-mask-box-image: url(../../img/logo/VIRGINIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-CARIBBEAN{
+  -webkit-mask-box-image: url(../../img/logo/CARIBBEAN-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-TRINIDAD{
+  -webkit-mask-box-image: url(../../img/logo/TRINIDAD-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-PENNSYLVANIA{
+  -webkit-mask-box-image: url(../../img/logo/PENNSYLVANIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-GEORGIA{
+  -webkit-mask-box-image: url(../../img/logo/GEORGIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-WESTASIA{
+  -webkit-mask-box-image: url(../../img/logo/WESTASIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-EASTASIA{
+  -webkit-mask-box-image: url(../../img/logo/EASTASIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SOUTHEAST{
+  -webkit-mask-box-image: url(../../img/logo/SOUTHEAST-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SOUTHASIA{
+  -webkit-mask-box-image: url(../../img/logo/SOUTHASIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-CENTRALASIA{
+  -webkit-mask-box-image: url(../../img/logo/CENTRALASIA-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-ASIAPACIFIC{
+  -webkit-mask-box-image: url(../../img/logo/ASIAPACIFIC-sdbr.png);
+  mask-image: url(../../img/logo/SYDNEY-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-GONGBALL{
+  -webkit-mask-box-image: url(../../img/logo/GongBall-sdbr.png);
+  mask-image: url(../../img/logo/GongBall-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-24D{
+  -webkit-mask-box-image: url(../../img/logo/BALL24D-sdbr.png);
+  mask-image: url(../../img/logo/BALL24D-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-12D{
+  -webkit-mask-box-image: url(../../img/logo/12D-sdbr.png);
+  mask-image: url(../../img/logo/12D-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-ROULETTE{
+  -webkit-mask-box-image: url(../../img/logo/Roulette-sdbr.png);
+  mask-image: url(../../img/logo/Roulette-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SICBODICE{
+  -webkit-mask-box-image: url(../../img/logo/Sicbo[Dice]-sdbr.png);
+  mask-image: url(../../img/logo/Sicbo[Dice]-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-OGLOK{
+  -webkit-mask-box-image: url(../../img/logo/Oglok-sdbr.png);
+  mask-image: url(../../img/logo/Oglok-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-DICE6{
+  -webkit-mask-box-image: url(../../img/logo/Dice6-sdbr.png);
+  mask-image: url(../../img/logo/Dice6-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-HEADTAIL{
+  -webkit-mask-box-image: url(../../img/logo/HeadTail-sdbr.png);
+  mask-image: url(../../img/logo/HeadTail-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-REDWHITE{
+  -webkit-mask-box-image: url(../../img/logo/RedWhite-sdbr.png);
+  mask-image: url(../../img/logo/RedWhite-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-24DSPIN{
+  -webkit-mask-box-image: url(../../img/logo/24Dspin-sdbr.png);
+  mask-image: url(../../img/logo/24Dspin-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-BILLIARDS{
+  -webkit-mask-box-image: url(../../img/logo/Billiards-sdbr.png);
+  mask-image: url(../../img/logo/Billiards-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-POKER_DICE{
+  -webkit-mask-box-image: url(../../img/logo/PokerDice-sdbr.png);
+  mask-image: url(../../img/logo/PokerDice-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SUWIT{
+  -webkit-mask-box-image: url(../../img/logo/suwit-sdbr.png);
+  mask-image: url(../../img/logo/suwit-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-MONOPOLY{
+  -webkit-mask-box-image: url(../../img/logo/monopoly-sdbr.png);
+  mask-image: url(../../img/logo/monopoly-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-MONOPOLY-WORLDCUP{
+  -webkit-mask-box-image: url(../../img/logo/MONOPOLY-WORLDCUP-sdbr.png);
+  mask-image: url(../../img/logo/MONOPOLY-WORLDCUP-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-DRAGONTIGER {
+    -webkit-mask-box-image: url(../../img/logo/dragontiger.png);
+    -webkit-mask-size: 100% 100%;
+}
+.fa-BACCARAT {
+    -webkit-mask-box-image: url(../../img/logo/baccarat.png);
+    -webkit-mask-size: 100% 100%;
+}
+.fa-NIUNIU {
+    -webkit-mask-box-image: url(../../img/logo/niuniu.png);
+    -webkit-mask-size: 100% 100%;
+}
+.fa-IDN4STAND {
+    -webkit-mask-box-image: url(../../img/logo/idn4stand.png);
+    -webkit-mask-size: 100% 100%;
+}
+.fa-ROULETTE2-FAST{
+  -webkit-mask-box-image: url(../../img/logo/Roulette-sdbr.png);
+  mask-image: url(../../img/logo/Roulette-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DSHIO{
+  -webkit-mask-box-image: url(../../img/logo/3DSHIO-sdbr.png);
+  mask-image: url(../../img/logo/monopoly-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-5DBALL{
+  -webkit-mask-box-image: url(../../img/logo/5DBALL-sdbr.png);
+  mask-image: url(../../img/logo/monopoly-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SICBOBALL-FAST{
+  -webkit-mask-box-image: url(../../img/logo/SICBOBALL-FAST-sdbr.png);
+  mask-image: url(../../img/logo/monopoly-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-FANTAN{
+  -webkit-mask-box-image: url(../../img/logo/Fantan.png);
+  mask-image: url(../../img/logo/Fantan.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-RACEBALL{
+  -webkit-mask-box-image: url(../../img/logo/RACEBALL-sdbr.png);
+  mask-image: url(../../img/logo/RACEBALL-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SAMGONG{
+  -webkit-mask-box-image: url(../../img/logo/SAMGONG-sdbr.png);
+  mask-image: url(../../img/logo/SAMGONG-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-GONGBALLJITU{
+  -webkit-mask-box-image: url(../../img/logo/GONGBALLJITU-sdbr.png);
+  mask-image: url(../../img/logo/GONGBALLJITU-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-SHIOFIGHTS{
+  -webkit-mask-box-image: url(../../img/logo/SHIOFIGHTS-sdbr.png);
+  mask-image: url(../../img/logo/SHIOFIGHTS-sdbr.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DARIZONA{
+  -webkit-mask-box-image: url(../../img/logo/3darizona.png);
+  mask-image: url(../../img/logo/3darizona.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DARKANSAS{
+  -webkit-mask-box-image: url(../../img/logo/3darkansas.png);
+  mask-image: url(../../img/logo/3darkansas.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DCALIFORNIA{
+  -webkit-mask-box-image: url(../../img/logo/3dcalifornia.png);
+  mask-image: url(../../img/logo/3dcalifornia.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DCOLORADO{
+  -webkit-mask-box-image: url(../../img/logo/3dcolorado.png);
+  mask-image: url(../../img/logo/3dcolorado.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DFLORIDA{
+  -webkit-mask-box-image: url(../../img/logo/3dflorida.png);
+  mask-image: url(../../img/logo/3dflorida.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DMICHIGAN{
+  -webkit-mask-box-image: url(../../img/logo/3dmichigan.png);
+  mask-image: url(../../img/logo/3dmichigan.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DNEWYORK{
+  -webkit-mask-box-image: url(../../img/logo/3dnewyork.png);
+  mask-image: url(../../img/logo/3dnewyork.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DOHIO{
+  -webkit-mask-box-image: url(../../img/logo/3dohio.png);
+  mask-image: url(../../img/logo/3dohio.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DOKLAHOMA{
+  -webkit-mask-box-image: url(../../img/logo/3doklahoma.png);
+  mask-image: url(../../img/logo/3doklahoma.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DTENNESSEE{
+  -webkit-mask-box-image: url(../../img/logo/3dtennessee.png);
+  mask-image: url(../../img/logo/3dtennessee.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-3DTEXAS{
+  -webkit-mask-box-image: url(../../img/logo/3dtexas.png);
+  mask-image: url(../../img/logo/3dtexas.png);
+  -webkit-mask-size: 100% 100%;
+} 
+.fa-3DWASHINGTON{
+  -webkit-mask-box-image: url(../../img/logo/3dwashington.png);
+  mask-image: url(../../img/logo/3dwashington.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-5DJAKARTA{
+  -webkit-mask-box-image: url(../../img/logo/5djakarta.png);
+  mask-image: url(../../img/logo/5djakarta.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-5DTAIPEI{
+  -webkit-mask-box-image: url(../../img/logo/5dtaipei.png);
+  mask-image: url(../../img/logo/5djakarta.png);
+  -webkit-mask-size: 100% 100%;
+}
+.fa-icongame{
+  margin-right: 7px;
+  right: 2px;
+  position: relative;
+}
+.newgame{
+  background: url(../../img/logo/newgame.png) right no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  z-index: 99;
+  float: right;
+}
+
+.newgame:hover{
+  background: url(../../img/logo/newgame.png) right no-repeat;
+  background-size: 40px;
+}
+
+#detailhadiah table tbody tr{
+  color: white;
+}
+
+table tbody tr, table thead tr, table tbody tr td, table thead tr td, table tbody tr td .text-center {
+  color: white;
+}
